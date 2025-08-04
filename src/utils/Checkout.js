@@ -1,7 +1,7 @@
 export const pricingRules = {
     ipd: (items) => {
         const price = items.length > 4 ? 499.99 : 549.99;
-        return price
+        return items.length*price
     },
     atv: (items) => {
         const count = items.length;
