@@ -33,11 +33,8 @@ export class Checkout {
         for (const sku in productGroup) {
             const items = productGroup[sku];
             if (this.pricingRules[sku]) {
-                console.log("the total", items.reduce((sum, p) => sum + p.price, 0));
                 total += this.pricingRules[sku](items);
             } else {
-
-
                 total += items.reduce((sum, p) => sum + p.price, 0)
             }
         }
